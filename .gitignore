@@ -2,5 +2,4 @@
 /.env
 /*.log
 /.nyc_output
-/test
 /npm-debug.log
