@@ -3,7 +3,7 @@
 const request = require('superagent');
 
 function handleWitResponse(res) {
-    return res.entities;
+	return res.entities;
 }
 
 class WitClient {
