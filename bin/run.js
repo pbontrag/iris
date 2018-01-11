@@ -1,12 +1,13 @@
 'use strict';
 const config = require('../config');
 const slackClient = require('../server/slackClient');
-const service = require('../server/service');
+const service = require('../server/service')(config);
 const http = require('http');
 const server = http.createServer(service);
 
 const witToken = config.witToken;
-const witClient = require('../server/witClient')(witToken);
+const WitClient = require('../server/witClient');
+const witClient = new WitClient(witToken);
 
 const slackToken = config.slackToken;
 const slackLogLevel = 'verbose';

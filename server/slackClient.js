@@ -12,7 +12,6 @@ function handleOnAuthenticated(rtmStartData) {
 }
 
 function handleOnMessage(message) {
-
     if (message.text.toLowerCase().includes('iris')) {
         nlp.ask(message.text, (err, res) => {
             if (err) {
@@ -32,7 +31,7 @@ function handleOnMessage(message) {
                         console.log(error.message);
                         return;
                     }
-                    
+
                     return rtm.sendMessage(response, message.channel);
                 })
 
