@@ -2,9 +2,9 @@
 
 class ServiceRegistry {
 
-    constructor() {
+    constructor(timeout) {
         this._services = [];
-        this._timeout = 30;
+        this._timeout = timeout;
     }
 
     add(intent, ip, port) {
@@ -42,7 +42,7 @@ class ServiceRegistry {
 
     _cleanup() {
         const now = Math.floor(new Date() / 1000);
-        
+
         for(let key in this._services) {
             if(this._services[key].timestamp + this._timeout < now) {
                 console.log(`Removed service for intent ${this._services[key].intent}`);
