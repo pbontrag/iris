@@ -50,7 +50,7 @@ class SlackClient {
 				} catch(err) {
 					this._log.error(err);
 					this._log.error(res);
-					this._rtm.sendMessage('Sorry, I don\'t know what you are talking about!', message.channel);
+					this._rtm.sendMessage('I\'m so sorry! But, I don\'t know what you are talking about!', message.channel);
 				}
 
 			});
