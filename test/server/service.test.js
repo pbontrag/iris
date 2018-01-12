@@ -1,7 +1,7 @@
 'use strict';
 
 const should = require('should');
-const request = require('request');
+const request = require('supertest');
 const config = require('../../config');
 const service = require('../../server/service')(config);
 
