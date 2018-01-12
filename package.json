@@ -1,7 +1,7 @@
 {
   "name": "iris",
   "version": "1.0.0",
-  "description": "",
+  "description": "A smart slackbot",
   "main": "server/service.js",
   "scripts": {
     "test": "NODE_ENV=test eslint bin server && nyc mocha --exit --recursive test",
