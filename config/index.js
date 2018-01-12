@@ -20,6 +20,7 @@ module.exports = {
 	slackToken: process.env.SLACK_TOKEN,
 	slackLogLevel: 'verbose',
 	serviceTimeout: 30,
+	irisApiToken: process.env.IRIS_API_TOKEN,
 	log: (env) => {
 		if (env) {
 			return log[env]();
